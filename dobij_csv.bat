@@ -1,0 +1,1 @@
+docker exec -u postgres postgresDB psql -d ORLab -c "COPY (SELECT city.*, measurement.* FROM city NATURAL JOIN measurement) TO STDOUT DELIMITER ',' CSV HEADER;" > novi_csv.csv
