@@ -2,9 +2,9 @@
 Repository that contains Open computing laboratory exercise
 
 ## Title
-Sensor Reading Open Dataset
+Sensor Measurement Dataset
 ## Description
-Sensor readings gathered from sensors in European cities.
+Measurements gathered from sensors in European cities.
 ## Author
 Ivan Lovrić
 ## Publication date
@@ -16,7 +16,7 @@ English
 ## Keywords
 Sensor, Europe, Open data
 ## Theme
-Open sensor dataset
+Sensor measurement open dataset
 ## Supported file formats
 CSV, JSON
 ## License
