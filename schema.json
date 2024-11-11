@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "Sensor Measurement Open Data",
+  "description": "Sensor measurements from cities all over Europe",
+  "required": ["cities"],
+  "properties": {
+    "cities": {
+      "type": "array",
+      "description": "Represents a list of European cities and their measurements.",
+      "items": {
+        "type": "object",
+        "description": "Represents one individual city and its measurements.",
+        "required": [
+          "cityid",
+          "cityname",
+          "country",
+          "latitude",
+          "longitude",
+          "area",
+          "elevation",
+          "population",
+          "timezone",
+          "region",
+          "measurements"
+        ],
+        "properties": {
+          "cityid": {
+            "type": "integer",
+            "description": "Represents city unique ID."
+          },
+          "cityname": {
+            "type": "string",
+            "description": "Represents city name."
+          },
+          "country": {
+            "type": "string",
+            "description": "Represents a country where a given city situated."
+          },
+          "latitude": {
+            "type": "string",
+            "description": "Represents city location (latitude)."
+          },
+          "longitude": {
+            "type": "string",
+            "description": "Represents city location (longitude)."
+          },
+          "area": {
+            "type": "string",
+            "description": "Represents an area in square kilometers for a given city."
+          },
+          "elevation": {
+            "type": "integer",
+            "description": "Represents average elevation from sea level in meters for a given city."
+          },
+          "population": {
+            "type": "integer",
+            "description": "Represents a population for a given city."
+          },
+          "timezone": {
+            "type": "string",
+            "description": "Represents a timezone for a given city."
+          },
+          "region": {
+            "type": "string",
+            "description": "Represents a region within the country where a given city is situated."
+          },
+          "measurements": {
+            "type": "array",
+            "description": "Represents a list of measurements for a given city.",
+            "items": {
+              "type": "object",
+              "description": "Represents one individual measurement.",
+              "required": [
+                "measurementid",
+                "timestamp",
+                "temperature",
+                "humidity",
+                "pressure"
+              ],
+              "properties": {
+                "measurementid": {
+                  "type": "integer",
+                  "description": "Represents unique measurement ID."
+                },
+                "timestamp": {
+                  "type": "string",
+                  "description": "Represents time and date when the given measurement was taken."
+                },
+                "temperature": {
+                  "type": "string",
+                  "description": "Represents sensor temperature reading for a given measurement."
+                },
+                "humidity": {
+                  "type": "string",
+                  "description": "Represents sensor humidity reading for a given measurement."
+                },
+                "pressure": {
+                  "type": "string",
+                  "description": "Represents sensor pressure reading for a given measurement."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
