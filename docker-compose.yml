@@ -1,11 +1,39 @@
 version: '3.1'
 
 services:
+  frontend:
+    image: 'ivan7665/or-lab:frontendv1'
+    container_name: frontend
+    ports:
+      - '80:80'
+  backend:
+    image: 'ivan7665/or-lab:backendv1'
+    container_name: backend
+    ports:
+      - '8087:8080'
+    depends_on:
+      postgresDB:
+        condition: service_healthy
+    environment:
+      - HOST=localhost
+      - PORT=8080
+      - DB_HOST=localhost
+      - DB_PORT=5432
+      - DB_DATABASE=ORLab
+      - DB_USER=postgres
+      - DB_PASSWORD=passoword
   postgresDB:
-    image: 'ivan7665/or-lab:v1.0'
+    image: 'ivan7665/or-lab:database'
     container_name: postgresDB
     environment:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=passoword
     ports:
-    - '5435:5432'
+    - '5432:5432'
+    expose:
+      - '5432'
+    healthcheck:
+      test: ["CMD-SHELL", "pg-isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
