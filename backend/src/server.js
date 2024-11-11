@@ -11,6 +11,8 @@ const app = express();
 const host = process.env.HOST;
 const port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
 
+app.use(cors());
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
