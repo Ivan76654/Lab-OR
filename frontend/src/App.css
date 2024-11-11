@@ -23,6 +23,12 @@ header, h1 {
 	margin-bottom: 10px;
 }
 
+div.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 h1.welcome {
 	text-align: center;
 }
@@ -99,22 +105,22 @@ form.filter-form * {
 	padding: 6px;
 }
 
-div.export-links-container * {
+div.export-links-container *, nav.nav-container * {
 	font-size: inherit;
 	padding: 6px;
 }
 
-ul.export-links-list {
+ul.export-links-list, ul.nav {
 	display: flex;
 	list-style: none;
 }
 
-ul.export-links-list a {
+ul.export-links-list a, ul.nav a {
 	color: blue;
 	text-decoration: none;
 }
 
-ul.export-links-list a:hover {
+ul.export-links-list a:hover, ul.nav a:hover {
 	cursor: pointer;
 	color: purple;
 }
