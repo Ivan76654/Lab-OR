@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://github.com/Ivan76654/Lab-OR/blob/master/data.json",
+  "$id": "https://github.com/Ivan76654/Lab-OR/blob/main/data.json",
   "type": "object",
   "title": "Sensor Measurement Open Data",
   "description": "Sensor measurements from cities all over Europe",
