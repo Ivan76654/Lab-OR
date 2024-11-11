@@ -8,7 +8,11 @@ RUN npm install
 
 COPY . .
 
-RUN npm build
+ARG DEFAULT_VITE_SERVER_HOST="http://localhost:8087"
+
+ENV VITE_SERVER_HOST=$DEFAULT_VITE_SERVER_HOST
+
+RUN npm run build
 
 EXPOSE 80
 

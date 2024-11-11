@@ -85,7 +85,9 @@ function FilterForm({ filterField, filterValue, onFilterSearchSubmit }) {
             type="text"
             placeholder="Filter value"
           ></input>
-          <button id='gumb' type="submit">Search</button>
+          <button id="gumb" type="submit">
+            Search
+          </button>
         </form>
       </div>
       <div className="export-links-container">
