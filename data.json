@@ -1,0 +1,319 @@
+{
+  "cities": [
+    {
+      "cityid": 1,
+      "cityname": "Berlin",
+      "country": "Germany",
+      "latitude": "52.5200",
+      "longitude": "13.4050",
+      "area": "891.30",
+      "elevation": 34,
+      "population": 3878000,
+      "timezone": "CET",
+      "region": "Berlin",
+      "measurements": [
+        {
+          "measurementid": 1,
+          "timestamp": "2023-01-15T07:45:00",
+          "temperature": "-1.30",
+          "humidity": "82.50",
+          "pressure": "1025.60"
+        },
+        {
+          "measurementid": 2,
+          "timestamp": "2023-05-20T14:30:00",
+          "temperature": "20.10",
+          "humidity": "45.30",
+          "pressure": "1013.20"
+        }
+      ]
+    },
+    {
+      "cityid": 2,
+      "cityname": "Madrid",
+      "country": "Spain",
+      "latitude": "40.4168",
+      "longitude": "-3.7038",
+      "area": "604.31",
+      "elevation": 650,
+      "population": 3223334,
+      "timezone": "CET",
+      "region": "Madrid",
+      "measurements": [
+        {
+          "measurementid": 3,
+          "timestamp": "2023-02-22T16:00:00",
+          "temperature": "14.50",
+          "humidity": "50.40",
+          "pressure": "1016.30"
+        },
+        {
+          "measurementid": 4,
+          "timestamp": "2023-06-15T12:30:00",
+          "temperature": "29.20",
+          "humidity": "40.20",
+          "pressure": "1010.90"
+        },
+        {
+          "measurementid": 5,
+          "timestamp": "2023-08-30T20:45:00",
+          "temperature": "26.80",
+          "humidity": "48.70",
+          "pressure": "1009.50"
+        }
+      ]
+    },
+    {
+      "cityid": 3,
+      "cityname": "Paris",
+      "country": "France",
+      "latitude": "48.8566",
+      "longitude": "2.3522",
+      "area": "105.40",
+      "elevation": 78,
+      "population": 2102650,
+      "timezone": "CET",
+      "region": "Île-de-France",
+      "measurements": [
+        {
+          "measurementid": 6,
+          "timestamp": "2023-03-10T08:00:00",
+          "temperature": "5.20",
+          "humidity": "78.40",
+          "pressure": "1021.50"
+        },
+        {
+          "measurementid": 7,
+          "timestamp": "2023-07-20T17:30:00",
+          "temperature": "25.60",
+          "humidity": "55.60",
+          "pressure": "1011.70"
+        },
+        {
+          "measurementid": 8,
+          "timestamp": "2023-10-22T06:45:00",
+          "temperature": "12.30",
+          "humidity": "68.10",
+          "pressure": "1016.20"
+        }
+      ]
+    },
+    {
+      "cityid": 4,
+      "cityname": "Rome",
+      "country": "Italy",
+      "latitude": "41.9028",
+      "longitude": "12.4964",
+      "area": "1285.00",
+      "elevation": 21,
+      "population": 2860009,
+      "timezone": "CET",
+      "region": "Lazio",
+      "measurements": [
+        {
+          "measurementid": 9,
+          "timestamp": "2023-01-28T11:15:00",
+          "temperature": "10.70",
+          "humidity": "55.90",
+          "pressure": "1018.30"
+        },
+        {
+          "measurementid": 10,
+          "timestamp": "2023-07-04T14:45:00",
+          "temperature": "30.10",
+          "humidity": "42.00",
+          "pressure": "1012.80"
+        }
+      ]
+    },
+    {
+      "cityid": 5,
+      "cityname": "Amsterdam",
+      "country": "Netherlands",
+      "latitude": "52.3676",
+      "longitude": "4.9041",
+      "area": "219.32",
+      "elevation": -2,
+      "population": 933680,
+      "timezone": "CET",
+      "region": "North Holland",
+      "measurements": [
+        {
+          "measurementid": 11,
+          "timestamp": "2023-04-18T13:00:00",
+          "temperature": "10.30",
+          "humidity": "65.20",
+          "pressure": "1019.80"
+        },
+        {
+          "measurementid": 12,
+          "timestamp": "2023-08-14T07:45:00",
+          "temperature": "21.50",
+          "humidity": "60.90",
+          "pressure": "1010.60"
+        },
+        {
+          "measurementid": 13,
+          "timestamp": "2023-10-01T19:30:00",
+          "temperature": "16.40",
+          "humidity": "72.30",
+          "pressure": "1012.40"
+        }
+      ]
+    },
+    {
+      "cityid": 6,
+      "cityname": "Vienna",
+      "country": "Austria",
+      "latitude": "48.2082",
+      "longitude": "16.3738",
+      "area": "414.78",
+      "elevation": 495,
+      "population": 2014614,
+      "timezone": "CET",
+      "region": "Vienna",
+      "measurements": [
+        {
+          "measurementid": 14,
+          "timestamp": "2023-09-25T16:30:00",
+          "temperature": "15.70",
+          "humidity": "58.40",
+          "pressure": "1015.90"
+        }
+      ]
+    },
+    {
+      "cityid": 7,
+      "cityname": "Stockholm",
+      "country": "Sweden",
+      "latitude": "59.3293",
+      "longitude": "18.0686",
+      "area": "188.00",
+      "elevation": 28,
+      "population": 984748,
+      "timezone": "CET",
+      "region": "Stockholm County",
+      "measurements": [
+        {
+          "measurementid": 15,
+          "timestamp": "2023-01-12T11:30:00",
+          "temperature": "-2.40",
+          "humidity": "88.50",
+          "pressure": "1026.70"
+        },
+        {
+          "measurementid": 16,
+          "timestamp": "2023-05-30T08:45:00",
+          "temperature": "15.00",
+          "humidity": "66.40",
+          "pressure": "1014.00"
+        },
+        {
+          "measurementid": 17,
+          "timestamp": "2023-09-18T14:30:00",
+          "temperature": "17.20",
+          "humidity": "70.80",
+          "pressure": "1016.90"
+        }
+      ]
+    },
+    {
+      "cityid": 8,
+      "cityname": "Copenhagen",
+      "country": "Denmark",
+      "latitude": "55.6761",
+      "longitude": "12.5683",
+      "area": "90.01",
+      "elevation": 13,
+      "population": 660842,
+      "timezone": "CET",
+      "region": "Capital Region",
+      "measurements": [
+        {
+          "measurementid": 18,
+          "timestamp": "2023-02-01T06:30:00",
+          "temperature": "-5.70",
+          "humidity": "90.20",
+          "pressure": "1028.00"
+        },
+        {
+          "measurementid": 19,
+          "timestamp": "2023-06-25T15:15:00",
+          "temperature": "18.20",
+          "humidity": "60.10",
+          "pressure": "1015.30"
+        }
+      ]
+    },
+    {
+      "cityid": 9,
+      "cityname": "Zagreb",
+      "country": "Croatia",
+      "latitude": "45.8130",
+      "longitude": "15.9775",
+      "area": "641.20",
+      "elevation": 158,
+      "population": 767131,
+      "timezone": "CET",
+      "region": "City of Zagreb",
+      "measurements": [
+        {
+          "measurementid": 20,
+          "timestamp": "2023-04-10T07:00:00",
+          "temperature": "8.50",
+          "humidity": "65.00",
+          "pressure": "1020.40"
+        },
+        {
+          "measurementid": 21,
+          "timestamp": "2023-08-19T16:45:00",
+          "temperature": "28.30",
+          "humidity": "50.70",
+          "pressure": "1011.00"
+        },
+        {
+          "measurementid": 22,
+          "timestamp": "2023-12-01T20:15:00",
+          "temperature": "4.00",
+          "humidity": "78.90",
+          "pressure": "1025.30"
+        }
+      ]
+    },
+    {
+      "cityid": 10,
+      "cityname": "London",
+      "country": "United Kingdom",
+      "latitude": "51.5074",
+      "longitude": "-0.1278",
+      "area": "1572.00",
+      "elevation": 25,
+      "population": 8866180,
+      "timezone": "GMT",
+      "region": "London",
+      "measurements": [
+        {
+          "measurementid": 23,
+          "timestamp": "2023-03-15T14:00:00",
+          "temperature": "10.80",
+          "humidity": "75.30",
+          "pressure": "1019.10"
+        },
+        {
+          "measurementid": 24,
+          "timestamp": "2023-07-09T18:15:00",
+          "temperature": "22.40",
+          "humidity": "57.90",
+          "pressure": "1011.20"
+        },
+        {
+          "measurementid": 25,
+          "timestamp": "2023-11-20T09:30:00",
+          "temperature": "9.10",
+          "humidity": "80.50",
+          "pressure": "1016.80"
+        }
+      ]
+    }
+  ]
+}
