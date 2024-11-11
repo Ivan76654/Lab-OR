@@ -11,5 +11,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.listen(port, () => {
-	console.log(`Server running on: http://${host}:${port}/`);
+  console.log(`Server running on: http://${host}:${port}/`);
 });
