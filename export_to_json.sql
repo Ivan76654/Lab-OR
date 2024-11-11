@@ -22,6 +22,8 @@ COPY (
 				NATURAL JOIN measurement
 			GROUP BY
 				city.cityId
+			ORDER BY
+				city.cityId
 		)
 	SELECT
         TO_JSONB(ARRAY_AGG(SQ))
