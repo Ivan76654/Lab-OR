@@ -1,0 +1,889 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Sensor Measurement Dataset",
+    "description": "API documentation for sensor measurement open dataset collected from cities all around Europe.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Ivan Lovrić",
+      "email": "il52759@fer.hr"
+    },
+    "license": {
+      "name": "CC BY-NC-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/api/v1",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/data": {
+      "get": {
+        "summary": "Get all cities and their measurements",
+        "tags": ["collection"],
+        "responses": {
+          "200": {
+            "description": "List of all cities and measurements",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/City"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities": {
+      "get": {
+        "summary": "Get all cities",
+        "responses": {
+          "200": {
+            "description": "List of all cities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "cityid": {
+                            "type": "integer",
+                            "example": 9
+                          },
+                          "cityname": {
+                            "type": "string",
+                            "example": "Zagreb"
+                          },
+                          "country": {
+                            "type": "string",
+                            "example": "Croatia"
+                          },
+                          "latitude": {
+                            "type": "string",
+                            "example": "45.813"
+                          },
+                          "longitude": {
+                            "type": "string",
+                            "example": "15.9775"
+                          },
+                          "area": {
+                            "type": "string",
+                            "example": "641.20"
+                          },
+                          "elevation": {
+                            "type": "integer",
+                            "example": 158
+                          },
+                          "population": {
+                            "type": "integer",
+                            "example": 767131
+                          },
+                          "timezone": {
+                            "type": "string",
+                            "example": "CET"
+                          },
+                          "region": {
+                            "type": "string",
+                            "example": "City of Zagreb"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add a new city",
+        "tags": ["single"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cityname": {
+                    "type": "string",
+                    "example": "Zagreb"
+                  },
+                  "country": {
+                    "type": "string",
+                    "example": "Croatia"
+                  },
+                  "latitude": {
+                    "type": "string",
+                    "example": "45.813"
+                  },
+                  "longitude": {
+                    "type": "string",
+                    "example": "15.9775"
+                  },
+                  "area": {
+                    "type": "string",
+                    "example": "641.20"
+                  },
+                  "elevation": {
+                    "type": "integer",
+                    "example": 158
+                  },
+                  "population": {
+                    "type": "integer",
+                    "example": 767131
+                  },
+                  "timezone": {
+                    "type": "string",
+                    "example": "CET"
+                  },
+                  "region": {
+                    "type": "string",
+                    "example": "City of Zagreb"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "City created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 201
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "properties": {
+                        "cityid": {
+                          "type": "integer",
+                          "example": 9
+                        },
+                        "cityname": {
+                          "type": "string",
+                          "example": "Zagreb"
+                        },
+                        "country": {
+                          "type": "string",
+                          "example": "Croatia"
+                        },
+                        "latitude": {
+                          "type": "string",
+                          "example": "45.813"
+                        },
+                        "longitude": {
+                          "type": "string",
+                          "example": "15.9775"
+                        },
+                        "area": {
+                          "type": "string",
+                          "example": "641.20"
+                        },
+                        "elevation": {
+                          "type": "integer",
+                          "example": 158
+                        },
+                        "population": {
+                          "type": "integer",
+                          "example": 767131
+                        },
+                        "timezone": {
+                          "type": "string",
+                          "example": "CET"
+                        },
+                        "region": {
+                          "type": "string",
+                          "example": "City of Zagreb"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing information in request body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": "Bad request",
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/{cityId}": {
+      "get": {
+        "summary": "Get a city by ID",
+        "tags": ["single"],
+        "parameters": [
+          {
+            "name": "cityId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "examples": {
+              "City with ID 1": {
+                "description": "A city with ID 1 in the dataset",
+                "value": 1
+              },
+              "City with ID 2": {
+                "description": "A city with ID 2 in the dataset",
+                "value": 2
+              },
+              "City with ID 3": {
+                "description": "A city with ID 3 in the dataset",
+                "value": 3
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "City details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "properties": {
+                        "cityid": {
+                          "type": "integer",
+                          "example": 9
+                        },
+                        "cityname": {
+                          "type": "string",
+                          "example": "Zagreb"
+                        },
+                        "country": {
+                          "type": "string",
+                          "example": "Croatia"
+                        },
+                        "latitude": {
+                          "type": "string",
+                          "example": "45.813"
+                        },
+                        "longitude": {
+                          "type": "string",
+                          "example": "15.9775"
+                        },
+                        "area": {
+                          "type": "string",
+                          "example": "641.20"
+                        },
+                        "elevation": {
+                          "type": "integer",
+                          "example": 158
+                        },
+                        "population": {
+                          "type": "integer",
+                          "example": 767131
+                        },
+                        "timezone": {
+                          "type": "string",
+                          "example": "CET"
+                        },
+                        "region": {
+                          "type": "string",
+                          "example": "City of Zagreb"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "City not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": "Not found"
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a city by ID",
+        "tags": ["single"],
+        "parameters": [
+          {
+            "name": "cityId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cityname": {
+                    "type": "string",
+                    "example": "Zagreb"
+                  },
+                  "country": {
+                    "type": "string",
+                    "example": "Croatia"
+                  },
+                  "latitude": {
+                    "type": "string",
+                    "example": "45.813"
+                  },
+                  "longitude": {
+                    "type": "string",
+                    "example": "15.9775"
+                  },
+                  "area": {
+                    "type": "string",
+                    "example": "641.20"
+                  },
+                  "elevation": {
+                    "type": "integer",
+                    "example": 158
+                  },
+                  "population": {
+                    "type": "integer",
+                    "example": 767131
+                  },
+                  "timezone": {
+                    "type": "string",
+                    "example": "CET"
+                  },
+                  "region": {
+                    "type": "string",
+                    "example": "City of Zagreb"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "City updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "City created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 201
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "properties": {
+                        "cityid": {
+                          "type": "integer",
+                          "example": 9
+                        },
+                        "cityname": {
+                          "type": "string",
+                          "example": "Zagreb"
+                        },
+                        "country": {
+                          "type": "string",
+                          "example": "Croatia"
+                        },
+                        "latitude": {
+                          "type": "string",
+                          "example": "45.813"
+                        },
+                        "longitude": {
+                          "type": "string",
+                          "example": "15.9775"
+                        },
+                        "area": {
+                          "type": "string",
+                          "example": "641.20"
+                        },
+                        "elevation": {
+                          "type": "integer",
+                          "example": 158
+                        },
+                        "population": {
+                          "type": "integer",
+                          "example": 767131
+                        },
+                        "timezone": {
+                          "type": "string",
+                          "example": "CET"
+                        },
+                        "region": {
+                          "type": "string",
+                          "example": "City of Zagreb"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing information in request body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": "Bad request",
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a city by ID",
+        "tags": ["single"],
+        "parameters": [
+          {
+            "name": "cityId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "City deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "City not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": "Not found"
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/measurements": {
+      "get": {
+        "summary": "Get all measurements",
+        "responses": {
+          "200": {
+            "description": "List of all measurements",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "type": "array",
+                      "minItems": 0,
+                      "items": {
+                        "$ref": "#/components/schemas/Measurement"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/measurements/{measurementId}": {
+      "get": {
+        "summary": "Get a measurement by ID",
+        "parameters": [
+          {
+            "name": "measurementId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "examples": {
+              "Measurement with ID 1": {
+                "description": "A measurement with ID 1 in the dataset",
+                "value": 1
+              },
+              "Measurement with ID 2": {
+                "description": "A measurement with ID 2 in the dataset",
+                "value": 2
+              },
+              "Measurement with ID 3": {
+                "description": "A measurement with ID 3 in the dataset",
+                "value": 3
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Measurement details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/Measurement"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Measurement not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": "Not found"
+                    },
+                    "response": {
+                      "type": "object",
+                      "example": null,
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/openapi": {
+      "get": {
+        "summary": "Get OpenAPI documentation in JSON format for this API.",
+        "responses": {
+          "200": {
+            "description": "OpenAPI documentation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "example": null,
+                      "nullable": true
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/OpenAPI"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "City": {
+        "type": "object",
+        "properties": {
+          "cityid": {
+            "type": "integer",
+            "example": 9
+          },
+          "cityname": {
+            "type": "string",
+            "example": "Zagreb"
+          },
+          "country": {
+            "type": "string",
+            "example": "Croatia"
+          },
+          "latitude": {
+            "type": "string",
+            "example": "45.813"
+          },
+          "longitude": {
+            "type": "string",
+            "example": "15.9775"
+          },
+          "area": {
+            "type": "string",
+            "example": "641.20"
+          },
+          "elevation": {
+            "type": "integer",
+            "example": 158
+          },
+          "population": {
+            "type": "integer",
+            "example": 767131
+          },
+          "timezone": {
+            "type": "string",
+            "example": "CET"
+          },
+          "region": {
+            "type": "string",
+            "example": "City of Zagreb"
+          },
+          "measurements": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "$ref": "#/components/schemas/Measurement"
+            }
+          }
+        }
+      },
+      "Measurement": {
+        "type": "object",
+        "properties": {
+          "measurementid": {
+            "type": "integer",
+            "example": 20
+          },
+          "cityid": {
+            "type": "integer",
+            "example": 9
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-04-10T07:00:00"
+          },
+          "temperature": {
+            "type": "string",
+            "example": "8.50"
+          },
+          "humidity": {
+            "type": "string",
+            "example": "65.00"
+          },
+          "pressure": {
+            "type": "string",
+            "example": "1020.40"
+          }
+        }
+      },
+      "OpenAPI": {
+        "type": "object",
+        "description": "OpenAPI documentation in for this API."
+      }
+    }
+  }
+}
