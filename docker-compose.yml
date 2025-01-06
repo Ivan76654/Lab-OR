@@ -8,9 +8,9 @@ services:
     stdin_open: true
     tty: true
   backend:
-    image: 'ivan7665/or-lab:backendv1'
+    image: 'ivan7665/or-lab:backendv2'
     ports:
-      - '8087:8080'
+      - '8080:8080'
     depends_on:
       postgresDB:
         condition: service_healthy
@@ -23,7 +23,7 @@ services:
       - DB_USER=postgres
       - DB_PASSWORD=passoword
   postgresDB:
-    image: 'ivan7665/or-lab:database'
+    image: 'ivan7665/or-lab:databasev2'
     container_name: postgresDB
     environment:
     - POSTGRES_USER=postgres

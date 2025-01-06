@@ -202,7 +202,7 @@ ALTER TABLE ONLY public.measurement
 --
 
 ALTER TABLE ONLY public.measurement
-    ADD CONSTRAINT fkcityid FOREIGN KEY (cityid) REFERENCES public.city(cityid);
+    ADD CONSTRAINT fkcityid FOREIGN KEY (cityid) REFERENCES public.city(cityid) ON DELETE SET NULL;
 
 
 --
